@@ -1,0 +1,13 @@
+body {
+  background-color: $black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin : 0 auto;
+  max-width: 1500px;
+  padding: 0 80px;
+}

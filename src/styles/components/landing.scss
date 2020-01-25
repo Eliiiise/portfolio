@@ -1,0 +1,95 @@
+nav {
+  position: fixed;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  width: calc( 100% - 160px);
+  margin-top: 50px;
+  max-width: 1500px;
+  z-index: 10;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 2px;
+}
+
+ul:nth-of-type(2) {
+  width: 300px;
+}
+
+li:nth-of-type(3) {
+  opacity: 0.2;
+}
+
+p {
+  font-size: 80px;
+  font-weight: 800;
+  margin: 60px 0;
+  letter-spacing: 2px;
+  font-family: 'cooper_hewittheavy';
+}
+
+section {
+  position: relative;
+  width: 100%;
+}
+
+.name, .nameBack {
+  width: 600px;
+  position: absolute;
+  z-index: 10;
+}
+
+.nameBack {
+  margin:  -60px 0  -70px 400px;
+}
+
+.name {
+  margin:  calc(50vh - 100px) 0px calc(50vh - 110px) 400px;
+}
+
+.name p {
+  color: rgba(0,0,0,0);
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.nameBack p {
+  color: white;
+}
+
+.images {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: calc( 50% - 400px );
+  margin-top: 88px;
+  transition: transform .25s;
+  will-change: transform;
+}
+
+img {
+  width: 800px;
+  opacity: 0.4;
+  margin:60px 0;
+}
+
+.detector {
+  width: 100%;
+  height: 80px;
+  margin-top: calc( 50vh - 40px);
+  position: fixed;
+  overflow: hidden;
+}
+
+.imgChoose{
+  opacity: 1
+}
+
+.txtChoose{
+  font-size: 100px;
+}
+
+

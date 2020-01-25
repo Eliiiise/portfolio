@@ -1,3 +1,4 @@
 import '../styles/index.scss';
+import { textEffect } from "./components/textEffect";
 
-console.log('webpack starterkit');
+textEffect();
