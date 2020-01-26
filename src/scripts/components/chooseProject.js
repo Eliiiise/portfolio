@@ -33,12 +33,12 @@ export const chooseProject = () => {
              document.querySelector(".detector").classList.add("delateDetector");
          }
          if (n<kept){
-             document.querySelector(".text"+n).style.transform= "translateY(-50px)"
-             document.querySelector(".img"+n).style.transform= "translateY(-50px)"
+             document.querySelector(".text"+n).style.transform= "translateY(-50px)";
+             document.querySelector(".img"+n).style.transform= "translateY(-50px)";
          }
         if (n>kept){
 
-            document.querySelector(".img"+n).style.transform= "translateY(+50px)"
+            document.querySelector(".img"+n).style.transform= "translateY(+50px)";
         }
         }
     }
@@ -55,5 +55,6 @@ export const chooseProject = () => {
         console.log(Limg);
         console.log(Ltext);
     }
+    3
 
-}
+};

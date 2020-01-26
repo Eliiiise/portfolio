@@ -24,6 +24,10 @@ module.exports = {
     ]),
     new HtmlWebpackPlugin({
       template: Path.resolve(__dirname, '../src/index.html')
+    }),
+    new HtmlWebpackPlugin({
+      filename: "karnish.html",
+      template: Path.resolve(__dirname, '../src/karnish.html')
     })
   ],
   resolve: {

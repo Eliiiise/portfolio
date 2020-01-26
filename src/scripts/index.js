@@ -1,6 +1,9 @@
 import '../styles/index.scss';
+
 import { textEffect } from "./components/textEffect";
-import { chooseProject} from "./components/chooseProject";
+import { pageTransition } from "./components/pageTransition";
+
 
 textEffect();
-chooseProject();
+pageTransition();
+
