@@ -1,0 +1,121 @@
+.projectHeaderImage {
+  margin-left: calc(50% - 80px - 400px * 0.8);
+  transform: scale(0.8);
+  opacity: 1;
+}
+
+.projectHeaderTitle {
+  width: 100%;
+  text-align: center;
+  margin-top: calc(50vh - 85px - 40px + 30px - 88px );
+  position: absolute;
+  top: 0;
+  transition: all 0s;
+}
+
+.swupProject {
+  width: 100%;
+  position: relative;
+  margin-top: 88px;
+  padding-bottom: 40vh;
+}
+
+header {
+ position: relative;
+  height: 100vh;
+}
+
+.close {
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+
+section img {
+  opacity: 1;
+  position: absolute;
+}
+
+section:nth-of-type(1) {
+  position: relative;
+  height: 90vh;
+}
+
+h2 {
+  position: absolute;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Titillium Web', sans-serif;
+  color: rgba(0,0,0,0);
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: #fff;
+  z-index: 30;
+  font-size: 100px;
+  width: 2000px;
+  transition: color 0.4s;
+  margin-left: 1000px;
+  margin-top: 200px;
+}
+
+em:hover {
+  transition: color 0.4s;
+  color: white;
+}
+
+section p,section a {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Titillium Web', sans-serif;
+  color: rgba(0,0,0,0);
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: #fff;
+  font-size: 80px;
+  width: 2000px;
+  transition: color 0.4s;
+  width: 100%;
+  text-align: center;
+  margin: 100px 0;
+  transition: all 0s;
+}
+
+#swup>a {
+  position: absolute;
+  bottom:0;
+  transition: all 0s;
+  width: 100%;
+}
+
+h3:hover {
+  color: white;
+  transition: color 0.4s;
+}
+ .imgNext {
+   position: absolute;
+   bottom: -20vh;
+   width: 640px;
+   left: calc( 50% - 320px );
+   opacity: 0;
+   display: none;
+ }
+
+ .close img {
+   opacity: 1;
+   width:20px;
+   margin: 10px 80px;
+ }
+
+section a {
+  position: relative;
+  font-weight: 900;
+  font-size: 16px;
+}
+

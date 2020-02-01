@@ -1,0 +1,11 @@
+.mockupFoot {
+  width: 25%;
+  right: 30%;
+  margin-top: 400px;
+}
+
+.shoes {
+  margin-top: -50px;
+  margin-left: -80px;
+  width: 60%;
+}

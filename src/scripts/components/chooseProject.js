@@ -1,28 +1,38 @@
-export const chooseProject = () => {
-    const nbProject=5;
-    for (let i = 1; i < nbProject+1; i++) {
-        const place=(i-1) * 280;
-        document.querySelector(".text"+i).addEventListener("click",  () => {
-            window.scroll(0,place);
-            setTimeout(function(){
-                document.querySelector(".text"+i).classList.add("textChoose");
-                document.querySelector(".img"+i).classList.add("imgChoose");
-                textCenter(i);
-                console.log(".text"+i);
-                delateOther(i);
-            }, Math.abs(window.scrollY-place)+100);
-        });
-        document.querySelector(".img"+i).addEventListener("click",  () => {
+import { closeProject } from "./closeProject";
+import { projectParallax } from "./projectParallax";
+import { nextProject } from "./nextProject";
 
-            window.scroll(0,place);
-            setTimeout(function(){
-                document.querySelector(".img"+i).classList.add("imgChoose");
-                document.querySelector(".text"+i).classList.add("textChoose");
-                textCenter(i);
-                console.log(".img"+i);
-                delateOther(i);
-            }, Math.abs(window.scrollY-place));
-        });
+export const chooseProject = () => {
+    const nbProject=6;
+    if(document.querySelector(".text1")!=null){
+        for (let i = 1; i < nbProject+1; i++) {
+            const place=(i-1) * 285;//defini quand on est enface du project
+            document.querySelector(".text"+i).addEventListener("click",  () => {
+                document.documentElement.style.overflow = 'hidden';
+                window.scroll(0,place);
+                setTimeout(function(){
+                    document.querySelector(".text"+i).classList.add("textChoose");
+                    document.querySelector(".img"+i).classList.add("imgChoose");
+                    textCenter(i);
+                    delateOther(i);
+                    document.querySelector("html").style.scrollBehavior="auto";
+                    closeProject();
+                    projectParallax();
+                    nextProject();
+                }, Math.abs(window.scrollY-place)+100);
+            });
+            document.querySelector(".img"+i).addEventListener("click",  () => {
+                document.documentElement.style.overflow = 'hidden';
+                window.scroll(0,place);
+                setTimeout(function(){
+                    document.querySelector(".img"+i).classList.add("imgChoose");
+                    document.querySelector(".text"+i).classList.add("textChoose");
+                    textCenter(i);
+                    delateOther(i);
+                    document.querySelector("html").style.scrollBehavior="auto";
+                }, Math.abs(window.scrollY-place)+100);
+            });
+        };
     };
 
     function delateOther(kept) {
@@ -48,13 +58,10 @@ export const chooseProject = () => {
         const Wtext=document.querySelector(".text"+kept).offsetWidth*1.78;
         const Limg=document.querySelector(".images").offsetLeft+(((Wimg/0.8)-Wimg)/2);
         const Ltext=document.querySelector(".name").offsetLeft;
-        const x=Limg-Ltext-((Wtext-Wimg)/2);
-        document.querySelector(".text"+kept).style.transform= "translate("+x+"px,-40px)";
-        console.log(Wimg);
-        console.log(Wtext);
-        console.log(Limg);
-        console.log(Ltext);
+        const x=Limg-Ltext-((Wtext-Wimg)/2)+2;
+        const y= -(kept-1)*6.2-40;
+        document.querySelector(".text"+kept).style.transform= "translate("+x+"px,"+y+"px)";
     }
-    3
+
 
 };

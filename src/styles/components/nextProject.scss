@@ -1,0 +1,16 @@
+.nextTitle {
+  transform: translateY( calc( -50vh + 200px  ));
+  transition: all .25s;
+}
+.next {
+  font-size: 180px !important;
+  transition: all .25s;
+  color: white;
+}
+
+.imgNextActive {
+  width: 640px;
+  left: calc( 50% - (640px /2) );
+  opacity: 1;
+  transform: translateY(-38vh);
+}

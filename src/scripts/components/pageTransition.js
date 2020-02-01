@@ -1,7 +1,6 @@
 import SwupJsPlugin from '@swup/js-plugin';
 import Swup from 'swup';
 import { TweenLite, TimelineMax, Linear, Back, Sine } from 'gsap';
-import { chooseProject } from "./chooseProject";
 
 export const pageTransition = () =>{
 
@@ -10,12 +9,17 @@ export const pageTransition = () =>{
          from: '(.*)', // meaning any
          to: '(.*)', // meaning any
          out: (next) => {
-
-            TweenLite.to(document.querySelector('#swup'), 2, {
+            document.querySelector('#swup').style.opacity = 1;
+            TweenLite.to(document.querySelector('#swup'), 1.8, {
                onComplete: next
             });
          },
-         in: (next) => next()
+         in: (next) => {
+
+            window.scroll(0,0);
+            document.documentElement.style.overflowY = 'scroll';
+            next();
+         },
       }
    ];
 

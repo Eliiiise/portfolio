@@ -1,29 +1,4 @@
-nav {
-  position: fixed;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  width: calc( 100% - 160px);
-  margin-top: 50px;
-  max-width: 1500px;
-  z-index: 10;
-}
-
-ul {
-  display: flex;
-  justify-content: space-between;
-  letter-spacing: 2px;
-}
-
-ul:nth-of-type(2) {
-  width: 300px;
-}
-
-li:nth-of-type(3) {
-  opacity: 0.2;
-}
-
-p, a {
+p, .name a {
   font-size: 100px;
   font-weight: 900;
   margin: 30px 0;
@@ -67,8 +42,7 @@ section {
   position: absolute;
   display: flex;
   flex-direction: column;
-  margin-left: calc( 50% - 400px );
-  margin-top: 88px;
+  margin: 88px calc( 50% - 480px ) 0 calc( 50% - 480px );
   transition: transform .25s;
   will-change: transform;
 }
@@ -86,34 +60,3 @@ img {
   position: fixed;
   overflow: hidden;
 }
-
-
-.imgChoose{
-  opacity: 1;
-  transform: scale(0.8);
-  transition: all 1s;
-}
-
-.textChoose{
-  font-size: 180px !important;
-  transition: all 1s;
-  color: white !important;
-  //transform: translate(-100px,-40px);
-}
-
-.imgDontChoose{
-  opacity: 0;
-  transition: all 1s;
-  pointer-events: none;
-}
-
-.textDontChoose{
-  opacity: 0;
-  transition: all 1s;
-  pointer-events: none;
-}
-
-.delateDetector{
-  opacity: 0;
-}
-

@@ -1,0 +1,31 @@
+
+.imgChoose{
+  opacity: 1;
+  transform: scale(0.8);
+  transition: all 1s;
+}
+
+.textChoose{
+  font-size: 180px !important;
+  transition: all 1s;
+  color: white !important;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.imgDontChoose{
+  opacity: 0;
+  transition: all 1s;
+  pointer-events: none;
+}
+
+.textDontChoose{
+  opacity: 0;
+  transition: all 1s;
+  pointer-events: none;
+}
+
+.delateDetector{
+  opacity: 0;
+}
