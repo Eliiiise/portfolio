@@ -1,5 +1,5 @@
 .nextTitle {
-  transform: translateY( calc( -50vh + 200px  ));
+  transform: translateY( calc(280px - 100vh + 88px + 50vh - 85px - 40px + 30px - 88px));
   transition: all .25s;
 }
 .next {
@@ -9,8 +9,9 @@
 }
 
 .imgNextActive {
-  width: 640px;
-  left: calc( 50% - (640px /2) );
+  width: 800px;
+  left: calc(50% - 80px - 400px * 0.8);
   opacity: 1;
-  transform: translateY(-38vh);
+  transform: scale(0.8);
+  bottom: calc( -1*( 449px - 449px * 0.8) + 100vh - (449px*0.8) - 88px - 60px );
 }
