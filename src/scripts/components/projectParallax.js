@@ -1,6 +1,7 @@
 
 
 export const projectParallax = () => {
+    window.scroll(0,1);
     window.onscroll = () => {
         if (document.querySelector(".projectHeaderImage")!=null){
             document.querySelector(".projectHeaderTitle").style.top= -window.scrollY/3+"px";

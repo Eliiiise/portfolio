@@ -4,36 +4,24 @@ import { nextProject } from "./nextProject";
 
 export const chooseProject = () => {
     const nbProject=6;
-    if(document.querySelector(".text1")!=null){
-        for (let i = 1; i < nbProject+1; i++) {
-            const place=(i-1) * 285;//defini quand on est enface du project
-            document.querySelector(".text"+i).addEventListener("click",  () => {
-                document.documentElement.style.overflow = 'hidden';
-                window.scroll(0,place);
-                setTimeout(function(){
-                    document.querySelector(".text"+i).classList.add("textChoose");
-                    document.querySelector(".img"+i).classList.add("imgChoose");
-                    textCenter(i);
-                    delateOther(i);
-                    document.querySelector("html").style.scrollBehavior="auto";
-                    closeProject();
-                    projectParallax();
-                    nextProject();
-                }, Math.abs(window.scrollY-place)+100);
-            });
-            document.querySelector(".img"+i).addEventListener("click",  () => {
-                document.documentElement.style.overflow = 'hidden';
-                window.scroll(0,place);
-                setTimeout(function(){
-                    document.querySelector(".img"+i).classList.add("imgChoose");
-                    document.querySelector(".text"+i).classList.add("textChoose");
-                    textCenter(i);
-                    delateOther(i);
-                    document.querySelector("html").style.scrollBehavior="auto";
-                }, Math.abs(window.scrollY-place)+100);
-            });
-        };
+    for (let i = 1; i < nbProject+1; i++) {
+        const place=(i-1) * 285; //defini quand on est enface du project
+        document.querySelector(".text"+i).addEventListener("click",  () => {
+            document.querySelector("html").style.scrollBehavior='smooth';
+            document.querySelector(".name").style.pointerEvents="none";
+            document.querySelector(".images").style.pointerEvents="none";
+            document.documentElement.style.overflow = 'hidden';
+            window.scroll(0,place);
+            setTimeout(function(){
+                document.querySelector("html").style.scrollBehavior='auto';
+                document.querySelector(".text"+i).classList.add("textChoose");
+                document.querySelector(".img"+i).classList.add("imgChoose");
+                textCenter(i);
+                delateOther(i);
+            }, Math.abs(window.scrollY-place)+100);
+        });
     };
+
 
     function delateOther(kept) {
         for (let n = 1; n < nbProject+1; n++) {

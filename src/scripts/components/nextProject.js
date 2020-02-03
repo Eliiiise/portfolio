@@ -1,21 +1,23 @@
 
 export const nextProject = () => {
-    console.log(document.querySelector(".nextProject"));
-    document.querySelector("h3").addEventListener("click",  () => {
-        //document.documentElement.style.overflow = 'hidden';
-        document.querySelector("#swup>a").style.transition=("all .8s");
-        document.querySelector("h3").style.transition=("all .8s");
-        document.querySelector(".imgNext").style.display=("block");
-        document.querySelector("#swup>a").classList.add("nextTitle");
-        document.querySelector("h3").classList.add("next");
-        document.querySelector("html").style.scrollBehavior="auto";
-        removeProject();
-        setTimeout(function(){
-            document.querySelector(".imgNext").style.transition=("all .8s");
-            document.querySelector(".imgNext").classList.add("imgNextActive");
-        }, 10);
+    if (document.querySelector("h3")){
+        document.querySelector("h3").addEventListener("click",  () => {
+            document.documentElement.style.overflow = 'hidden';
+            document.querySelector("#swup>a").style.transition=("all .8s");
+            document.querySelector("h3").style.transition=("all .8s");
+            document.querySelector(".imgNext").style.display=("block");
+            document.querySelector("#swup>a").classList.add("nextTitle");
+            document.querySelector("h3").classList.add("next");
+            document.querySelector("html").style.scrollBehavior="auto";
+            removeProject();
+            window.scroll(0,document.querySelector("body").offsetHeight);
+            setTimeout(function(){
+                document.querySelector(".imgNext").style.transition=("all .8s");
+                document.querySelector(".imgNext").classList.add("imgNextActive");
+            }, 10);
 
-    });
+        });
+    }
 };
 
 function removeProject() {
